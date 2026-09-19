@@ -1,0 +1,484 @@
+:root {
+
+  /* =========================
+     COLORS
+  ========================= */
+
+  --primary: #82193A;
+  --primary-dark: #5E1029;
+  --primary-light: #A92D52;
+
+  --accent: #FEE3C5;
+  --accent-light: #FFF1E3;
+
+  --bg: #100C0E;
+  --bg-secondary: #181214;
+  --bg-card: #21191C;
+
+  --white: #FFFFFF;
+  --text: #F5F1EF;
+  --text-muted: #B9AFB2;
+
+  --border: #382B2F;
+
+
+  /* =========================
+     FONT
+  ========================= */
+
+  --font-primary:  "Manrope", sans-serif;
+
+
+  /* =========================
+     FONT SIZE
+  ========================= */
+
+  --fs-h1: 3.5rem;       /* 56px */
+  --fs-h2: 2.5rem;       /* 40px */
+  --fs-h3: 2rem;         /* 32px */
+  --fs-h4: 1.5rem;       /* 24px */
+  --fs-h5: 1.25rem;      /* 20px */
+  --fs-h6: 1rem;         /* 16px */
+
+  --fs-body-lg: 1.125rem; /* 18px */
+  --fs-body: clamp(0.75rem, 1vw, 1rem);        /* 16px */
+  --fs-body-sm: 0.875rem; /* 14px */
+  --fs-caption: 0.75rem;  /* 12px */
+
+
+  /* =========================
+     FONT WEIGHT
+  ========================= */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+
+  /* =========================
+     LINE HEIGHT
+  ========================= */
+
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+
+  /* =========================
+     SPACING
+  ========================= */
+
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-9: 5rem;     /* 80px */
+  --space-10: 6rem;    /* 96px */
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  --container-width: 1200px;
+  --container-padding: 24px;
+
+
+  /* =========================
+     SECTION
+  ========================= */
+
+  /* --section-padding: 96px; */
+
+
+  /* =========================
+     GRID
+  ========================= */
+
+  --grid-gap: 24px;
+
+
+  /* =========================
+     BORDER RADIUS
+  ========================= */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+
+  /* =========================
+     BORDER
+  ========================= */
+
+  --border-width: 1px;
+
+
+  /* =========================
+     SHADOW
+  ========================= */
+
+  --shadow-sm:
+    0 2px 8px rgba(0, 0, 0, 0.15);
+
+  --shadow-md:
+    0 8px 24px rgba(0, 0, 0, 0.20);
+
+  --shadow-lg:
+    0 16px 40px rgba(0, 0, 0, 0.25);
+
+
+  /* =========================
+     TRANSITION
+  ========================= */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+
+  /* =========================
+     Z-INDEX
+  ========================= */
+
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-modal: 1000;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--text);
+  background: var(--bg);
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  width: min(
+    100% - (var(--container-padding) * 2),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+/* section {
+  padding-block: var(--section-padding);
+} */
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+}
+
+h5 {
+  font-size: var(--fs-h5);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-semibold);
+}
+
+h6 {
+  font-size: var(--fs-h6);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-semibold);
+}
+
+p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  font-weight: var(--fw-regular);
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   COMMON GRID
+========================================================= */
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+
+/* 4 columns */
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* 3 columns */
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* 2 columns */
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* 1 column */
+
+.grid-1 {
+  grid-template-columns: 1fr;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-light);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding-inline: 24px;
+
+  border-radius: var( --radius-md);
+
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+
+  transition: var(--transition-normal);
+}
+
+.btn-primary {
+  color: var(--white);
+  background: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.btn-outline {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 14px;
+
+  border-radius: var(--radius-full);
+
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+
+  color: var(--accent);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   TABLET
+   768px – 1199px
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  :root {
+
+    --container-width: 960px;
+
+    --section-padding: 64px;
+
+    --fs-h1: 3rem;       /* 48px */
+    --fs-h2: 2.25rem;    /* 36px */
+    --fs-h3: 1.75rem;    /* 28px */
+    --fs-h4: 1.375rem;   /* 22px */
+    --fs-h5: 1.125rem;   /* 18px */
+    --fs-h6: 1rem;       /* 16px */
+
+    --grid-gap: 20px;
+  }
+
+
+  /* 4 → 2 */
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* 3 → 2 */
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .card {
+    padding: var(--space-5);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   0px – 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  :root {
+
+    --container-padding: 16px;
+
+    --section-padding: 48px;
+
+    --fs-h1: 2.25rem;    /* 36px */
+    --fs-h2: 1.75rem;    /* 28px */
+    --fs-h3: 1.5rem;     /* 24px */
+    --fs-h4: 1.25rem;    /* 20px */
+    --fs-h5: 1.125rem;   /* 18px */
+    --fs-h6: 1rem;       /* 16px */
+
+    --fs-body: 0.9375rem; /* 15px */
+
+    --grid-gap: 16px;
+  }
+
+
+  /* Everything → 1 column */
+
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+
+  .card {
+    padding: var(--space-4);
+  }
+
+
+  .btn {
+    width: 100%;
+  }
+}
+
+
