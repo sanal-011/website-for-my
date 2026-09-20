@@ -166,7 +166,7 @@ textarea:-webkit-autofill:focus {
     color: white;
 }
 .high-section{
-   margin: 0 4.75rem;
+   margin: 0 4.75rem !importance;
 }
 
 /* Mobile */
