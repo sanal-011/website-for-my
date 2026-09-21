@@ -192,6 +192,7 @@ textarea:-webkit-autofill:focus {
     }
     .high-section{
         padding: 1rem !importance;
+          margin: 1rem ;
     }
 }
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
