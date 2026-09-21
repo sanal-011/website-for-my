@@ -212,10 +212,6 @@ textarea:-webkit-autofill:focus {
     .high-section{
         padding: 1rem;
     }
-}
-
-
-
 
 .location-section {
   width: 100%;
@@ -330,6 +326,7 @@ textarea:-webkit-autofill:focus {
     /* border-color: var(--primary-light) #A92D52;
     border: solid 2px var(--primary-dark); */
 
+}
 }
 /* Tablet */
 @media (max-width: 64rem) {
