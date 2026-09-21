@@ -443,6 +443,11 @@ p{
     .interests-section{
         padding: 0 1rem;
     }
+     .my-story-right-title{
+        flex-direction:column;
+        display: flex;
+    align-items: flex-start;
+    }
 
 }
 /* Tablet */
@@ -523,7 +528,6 @@ p{
     .interests-section{
         padding: 0 1rem;
     }
-    .my-story-right-title{
-        flex-direction:column;
-    }
+   
+    
 }
