@@ -350,6 +350,14 @@ textarea:-webkit-autofill:focus {
     height: 350px;
     border-radius: 0.75rem;
   }
+
+    .high-section-cover {
+        /* flex-direction: column; */
+        gap: 2rem;
+        flex-wrap: wrap;
+        /* text-align: center; */
+        justify-content: center;
+    }
 }
 
 /* Small mobile */
