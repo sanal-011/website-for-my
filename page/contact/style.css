@@ -73,7 +73,7 @@
 .form-group {
     width: 100%;
     margin-bottom: 1rem;
-   
+
     position: relative;
 }
 
@@ -81,7 +81,7 @@
     position: absolute;
     top: 18px;
     left: 34px;
-    color:var(--text-muted);
+    color: var(--text-muted);
 }
 
 .form-group input {
@@ -130,43 +130,167 @@ textarea:-webkit-autofill:focus {
     transition: background-color 9999s ease-in-out 0s;
     color: white !important;
 }
-.btn-primary i{
+
+.btn-primary i {
     margin-left: 12px;
 }
-.location-map-cover{
+
+.location-map-cover {
     margin: 0 4.75rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     margin-top: 2rem;
-     box-shadow: 0 0.25rem 1rem rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
+    box-shadow: 0 0.25rem 1rem rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     padding: 1rem;
-   
+
 }
-.map-img{
+
+.map-img {
     width: 100%;
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
 }
-.map-img img{
+
+.map-img img {
     width: 100%;
     height: 100%;
 }
-.map-details{
+
+.map-details {
     padding: 1rem;
 }
-.map-details h5{
+
+.map-details h5 {
     color: var(--primary-light);
 }
-.map-details span{
+
+.map-details span {
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
 }
-.high-section{
+
+.high-section {
     padding: 0 4.75rem;
+}
+
+.location-section {
+    width: 100%;
+    padding: 5rem 1.5rem;
+}
+
+.location-container {
+    width: min(1200px, 100%);
+    margin-inline: auto;
+}
+
+.location-content {
+    margin-bottom: 2rem;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.location-content h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.location-content p {
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Map */
+.map-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+#locationMap {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.high-section-cover {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.high-section-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.high-section {
+    margin-top: 2rem;
+    /* padding: 0px 5.9rem; */
+}
+
+.high-section-left-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: dashed 2px var(--primary-light);
+}
+
+.high-section-left-icon i {
+    font-size: 1.4rem;
+    color: var(--primary-light);
+}
+
+.high-section-left-deatil p {
+    font-size: 12px;
+}
+
+.high-section-right a {
+    padding: 0.9rem 1.3rem;
+    background-color: var(--primary-dark);
+    border-radius: 10px;
+    font-weight: var(--fw-semibold);
+    font-size: 1.2rem;
+}
+
+.high-section-right a i {
+    margin-left: 5px
+}
+
+.high-section-right a:hover {
+    padding: 0.9rem 1.3rem;
+    background-color: var(--primary-light);
+    border-radius: 10px;
+    font-weight: var(--fw-semibold);
+    font-size: 1.2rem;
+}
+
+/* Small mobile */
+@media (max-width: 30rem) {
+    .map-wrapper {
+        height: 300px;
+    }
 }
 
 /* Mobile */
@@ -175,122 +299,93 @@ textarea:-webkit-autofill:focus {
         grid-template-columns: 1fr;
 
     }
-    .contact-detail-section{
-         grid-template-columns: 1fr;
-         margin: 1rem;
-    }
-    .location-map-cover{
+
+    .contact-detail-section {
         grid-template-columns: 1fr;
-         margin: 1rem;
-         display: block;
+        margin: 1rem;
     }
-    .map-details span{
+
+    .location-map-cover {
+        grid-template-columns: 1fr;
+        margin: 1rem;
+        display: block;
+    }
+
+    .map-details span {
         font-size: 1rem;
     }
-    .map-details p{
-         font-size: 12px;
+
+    .map-details p {
+        font-size: 12px;
     }
-    .high-section{
+
+    .high-section {
         padding: 1rem;
         margin-top: 1rem;
     }
+     .high-section-cover {
+        /* flex-direction: column; */
+        gap: 2rem;
+        flex-wrap: wrap;
+        /* text-align: center; */
+        justify-content: center;
+    }
+
+    .high-section {
+        padding: 1rem;
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .footer-sub {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
+
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
-    .contact-detail-section{
+    .contact-detail-section {
         margin: 2rem;
     }
 
-    .contact-detail-section{
-         grid-template-columns: 1fr 1fr;
-         margin: 1rem;
+    .contact-detail-section {
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem;
     }
-    .location-map-cover{
+
+    .location-map-cover {
         margin: 1rem;
 
     }
-    .high-section{
+
+    .high-section {
         padding: 1rem;
+    }
+
+    .location-section {
+        padding: 3rem 1rem;
+    }
+
+    .map-wrapper {
+        height: 350px;
+        border-radius: 0.75rem;
+    }
+    .high-section {
+        padding: 0 2rem;
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1440px) {
+ .high-section{
+         padding: 0 3rem;
+    }
 
-
-
-.location-section {
-  width: 100%;
-  padding: 5rem 1.5rem;
 }
-
-.location-container {
-  width: min(1200px, 100%);
-  margin-inline: auto;
-}
-
-.location-content {
-  margin-bottom: 2rem;
-}
-
-.section-label {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-}
-
-.location-content h2 {
-  margin: 0 0 1rem;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.1;
-}
-
-.location-content p {
-  max-width: 600px;
-  margin: 0;
-  line-height: 1.7;
-}
-
-/* Map */
-.map-wrapper {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 1rem;
-}
-
-#locationMap {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* Tablet */
-@media (max-width: 64rem) {
-  .location-section {
-    padding: 4rem 1.25rem;
-  }
-
-  .map-wrapper {
-    height: 300px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 48rem) {
-  .location-section {
-    padding: 3rem 1rem;
-  }
-
-  .map-wrapper {
-    height: 350px;
-    border-radius: 0.75rem;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 30rem) {
-  .map-wrapper {
-    height: 300px;
-  }
+/* Desktop */
+@media (min-width: 1440px) {
+     .high-section{
+        padding: 0 4.75rem;
+    }
 }
