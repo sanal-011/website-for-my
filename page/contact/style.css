@@ -165,9 +165,10 @@ textarea:-webkit-autofill:focus {
     font-weight: 600;
     color: white;
 }
-/* .high-section{
+.high-section{
    margin: 0 4.75rem ;
-} */
+    
+}
 
 /* Mobile */
 @media (max-width: 40rem) {
@@ -279,10 +280,10 @@ textarea:-webkit-autofill:focus {
     gap: 1rem;
 }
 
-/* .high-section {
+.high-section {
     margin-top: 2rem;
     padding: 0 4.75rem;
-} */
+}
 
 .high-section-left-icon {
     width: 50px;
