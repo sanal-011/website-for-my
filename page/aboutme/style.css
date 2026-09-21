@@ -404,7 +404,9 @@
 
 /* ======================================== SMALL MOBILE — 400px ======================================== */
 @media (max-width: 46rem) {
-
+p{
+    word-break:break-word;
+}
     .my-story {
         display: grid;
         grid-template-columns: 1fr;
