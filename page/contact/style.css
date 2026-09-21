@@ -278,10 +278,10 @@ textarea:-webkit-autofill:focus {
     gap: 1rem;
 }
 
-.high-section {
+/* .high-section {
     margin-top: 2rem;
     padding: 0 4.75rem;
-}
+} */
 
 .high-section-left-icon {
     width: 50px;
