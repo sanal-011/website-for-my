@@ -166,7 +166,7 @@ textarea:-webkit-autofill:focus {
     color: white;
 }
 .high-section{
-   margin: 0 4.75rem !importance;
+   margin: 0 4.75rem ;
 }
 
 /* Mobile */
@@ -191,7 +191,7 @@ textarea:-webkit-autofill:focus {
          font-size: 12px;
     }
     .high-section{
-        padding: 1rem;
+        padding: 1rem !importance;
     }
 }
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
